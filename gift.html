@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give the Gift of Nothing</title>
+<meta name="description" content="Nothing makes the perfect gift. No shipping, no wrapping, no assembly, no batteries, no returns.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <h1>Give the gift of nothing.</h1>
+  <p class="tagline">
+    Nothing makes the perfect gift — for birthdays, anniversaries, holidays,<br>
+    and people who already have everything.
+  </p>
+  <ul class="features">
+    <li>No shipping required</li>
+    <li>No wrapping required</li>
+    <li>No assembly required</li>
+    <li>No batteries included</li>
+    <li>No returns accepted — there is nothing to return</li>
+  </ul>
+  <div class="price-card">
+    <p class="price">$3.99<span>/month, gifted</span></p>
+    <p class="price-sub">They'll never see it coming. Mostly because there's nothing to see.</p>
+    <button class="cta" id="subscribe">Gift Absolutely Nothing</button>
+    <p class="status" id="status">Gifting launches with payments. Check back shortly.</p>
+  </div>
+
+  <p class="footnote">*The recipient will not receive any product, service, feature, download, or benefit of any kind. They will receive the satisfaction of knowing you paid $3.99/month on their behalf.</p>
+  <footer>
+    © 2026 Absolutely Nothing. All rights reserved to no one.
+    <nav class="site-nav">
+      <a href="index.html">Home</a><span class="sep">·</span><a href="teams.html">For Teams</a><span class="sep">·</span><a href="updates.html">Company Updates</a><span class="sep">·</span><a href="careers.html">Careers</a>
+    </nav>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe').addEventListener('click', function () {
+      document.getElementById('status').textContent = "Still nothing here — for now. Gifting is coming soon.";
+    });
+  </script>
+</body>
+</html>
