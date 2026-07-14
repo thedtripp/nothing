@@ -8,6 +8,20 @@
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+
+  <div class="menu-backdrop" id="menu-backdrop" hidden></div>
+  <nav class="site-menu" id="site-menu" aria-label="Site menu" aria-hidden="true">
+    <ul class="site-menu-list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../gift.html">Gift</a></li>
+      <li><a href="../teams.html">For Teams</a></li>
+      <li><a href="../updates.html">Company Updates</a></li>
+      <li><a href="../careers.html">Careers</a></li>
+    </ul>
+  </nav>
   <a class="back-link" href="../careers.html">&larr; Back to Careers</a>
   <h1>Enterprise Account Executive, Teams.</h1>
   <p class="job-meta-line">Sales &middot; Remote &middot; Full-time</p>
@@ -51,6 +65,41 @@
     document.getElementById('apply').addEventListener('click', function () {
       document.getElementById('apply-status').textContent = "Applications aren't open yet. When they are, you still won't hear back.";
     });
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('menu-btn');
+      var backdrop = document.getElementById('menu-backdrop');
+      var menu = document.getElementById('site-menu');
+      var hideTimer;
+      function openMenu() {
+        clearTimeout(hideTimer);
+        backdrop.hidden = false;
+        requestAnimationFrame(function () {
+          menu.classList.add('open');
+          backdrop.classList.add('open');
+        });
+        btn.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        menu.classList.remove('open');
+        backdrop.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        hideTimer = setTimeout(function () { backdrop.hidden = true; }, 250);
+      }
+      function toggleMenu() {
+        if (menu.classList.contains('open')) closeMenu(); else openMenu();
+      }
+      btn.addEventListener('click', toggleMenu);
+      backdrop.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+      });
+    })();
   </script>
 </body>
 </html>
