@@ -37,8 +37,8 @@
   <div class="price-card">
     <p class="price">$3.99<span>/seat/month</span></p>
     <p class="price-sub">Volume discounts unavailable — 0% off, no matter how many seats.</p>
-    <button class="cta" id="subscribe">Get Nothing for Your Team</button>
-    <p class="status" id="status">Team billing launches with payments. Check back shortly.</p>
+    <a class="cta" href="https://buy.stripe.com/7sYbJ186n8EK91beWa9k400?client_reference_id=ddtripp">Get Nothing for Your Team</a>
+    <p class="status" id="status">Secure checkout. Your team will still receive nothing.</p>
   </div>
 
   <p class="footnote">*No seat will receive any product, service, feature, download, or benefit of any kind. Uptime is 100% because nothing is running.</p>
@@ -49,11 +49,6 @@
     </nav>
   </footer>
 
-  <script>
-    document.getElementById('subscribe').addEventListener('click', function () {
-      document.getElementById('status').textContent = "Still nothing here — for now. Team billing is coming soon.";
-    });
-  </script>
   <script>
     (function () {
       var btn = document.getElementById('menu-btn');

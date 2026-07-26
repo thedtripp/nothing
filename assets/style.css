@@ -87,7 +87,8 @@ h1 {
   font-size: 0.9rem;
   margin: 0.35rem 0 1.75rem;
 }
-button.cta {
+.cta {
+  display: block;
   width: 100%;
   padding: 0.9rem 1.5rem;
   font-size: 1rem;
@@ -96,10 +97,13 @@ button.cta {
   border: none;
   background: var(--accent);
   color: var(--bg);
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
   cursor: pointer;
   transition: opacity 0.15s ease;
 }
-button.cta:hover { opacity: 0.85; }
+.cta:hover { opacity: 0.85; }
 .status {
   margin-top: 0.9rem;
   font-size: 0.85rem;
