@@ -339,6 +339,7 @@ footer {
   color: var(--fg);
 }
 .job-detail ul { padding-left: 1.2rem; }
+.job-detail a { color: var(--fg); }
 .apply-row {
   margin-top: 1.25rem;
   display: flex;
