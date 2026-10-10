@@ -394,3 +394,33 @@ button.apply:hover { opacity: 0.7; }
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* Post-purchase success page */
+.confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+.dashboard { text-align: left; }
+.dashboard h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+.dashboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dashboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.dashboard li span:last-child { color: var(--muted); font-variant-numeric: tabular-nums; }
