@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms &amp; Policies — Absolutely Nothing</title>
+<meta name="description" content="Terms of service, billing, cancellation, refund, and privacy policies for Absolutely Nothing.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+
+  <div class="menu-backdrop" id="menu-backdrop" hidden></div>
+  <nav class="site-menu" id="site-menu" aria-label="Site menu" aria-hidden="true">
+    <ul class="site-menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gift.html">Gift</a></li>
+      <li><a href="teams.html">For Teams</a></li>
+      <li><a href="updates.html">Company Updates</a></li>
+      <li><a href="careers.html">Careers</a></li>
+    </ul>
+  </nav>
+  <h1>Terms &amp; Policies</h1>
+  <p class="job-meta-line">Effective October 10, 2026</p>
+
+  <div class="job-detail">
+    <h3>Who we are</h3>
+    <p>Absolutely Nothing is operated by [LEGAL ENTITY NAME] ("Absolutely Nothing," "we," "us"). These terms govern your use of this website and your purchase of an Absolutely Nothing subscription. By subscribing, you agree to them.</p>
+
+    <h3>The service</h3>
+    <p>Absolutely Nothing is a novelty subscription. Subscribers receive membership in Absolutely Nothing and nothing else. No software, downloads, features, physical goods, or deliverables of any kind are provided, now or in the future. By subscribing, you confirm that you understand this before you pay.</p>
+
+    <h3>Billing</h3>
+    <p>Subscriptions cost $3.99 USD per month, plus any applicable taxes, and renew automatically each month until you cancel. Payments are processed by Stripe. The charge appears on your statement as ABSOLUTELY NOTHING. Gift and Teams purchases are billed to the purchaser on the same terms.</p>
+
+    <h3>Cancellation</h3>
+    <p>You can cancel at any time using the "manage subscription" link in your receipt email, or by emailing [SUPPORT EMAIL]. Cancellation takes effect at the end of your current billing period, and you will not be charged again.</p>
+
+    <h3>Refunds</h3>
+    <p>If you were charged in error, or subscribed and changed your mind, email [SUPPORT EMAIL] within 30 days of the charge and we will refund it in full. Refunds are returned to the original payment method.</p>
+
+    <h3>Billing questions and disputes</h3>
+    <p>If something about a charge looks wrong, please contact us at [SUPPORT EMAIL] before contacting your bank. We respond within two business days and can usually resolve the issue faster than a dispute can.</p>
+
+    <h3>Privacy</h3>
+    <p>Card details are collected and processed by Stripe; we never see or store your full card number. Stripe shares your name, email address, billing details, and purchase history with us so we can manage your subscription and contact you about it. We do not sell your information or use it for advertising. This site sets no tracking cookies; it remembers which link you arrived from for the length of your browser session, and our hosting provider keeps standard server logs. To request access to or deletion of your information, email [SUPPORT EMAIL].</p>
+
+    <h3>Eligibility</h3>
+    <p>You must be 18 or older, or have the permission of a parent or guardian, to subscribe.</p>
+
+    <h3>Disclaimers and liability</h3>
+    <p>The service is provided as described above and without any other warranty. To the extent permitted by law, our total liability to you is limited to the amount you paid us in the 12 months before the claim.</p>
+
+    <h3>Changes</h3>
+    <p>We may update these terms. If a change affects your subscription, we will email you before it takes effect. Continuing your subscription after that means you accept the updated terms.</p>
+
+    <h3>Governing law</h3>
+    <p>These terms are governed by the laws of the State of [STATE], United States.</p>
+
+    <h3>Contact</h3>
+    <p>[SUPPORT EMAIL]</p>
+  </div>
+
+  <footer>
+    © 2026 Absolutely Nothing. All rights reserved to no one.
+    <nav class="site-nav">
+      <a href="index.html">Home</a><span class="sep">·</span><a href="gift.html">Gift</a><span class="sep">·</span><a href="teams.html">For Teams</a><span class="sep">·</span><a href="updates.html">Company Updates</a><span class="sep">·</span><a href="careers.html">Careers</a><span class="sep">·</span><a href="terms.html">Terms</a>
+    </nav>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('menu-btn');
+      var backdrop = document.getElementById('menu-backdrop');
+      var menu = document.getElementById('site-menu');
+      var hideTimer;
+      function openMenu() {
+        clearTimeout(hideTimer);
+        backdrop.hidden = false;
+        requestAnimationFrame(function () {
+          menu.classList.add('open');
+          backdrop.classList.add('open');
+        });
+        btn.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        menu.classList.remove('open');
+        backdrop.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        hideTimer = setTimeout(function () { backdrop.hidden = true; }, 250);
+      }
+      function toggleMenu() {
+        if (menu.classList.contains('open')) closeMenu(); else openMenu();
+      }
+      btn.addEventListener('click', toggleMenu);
+      backdrop.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
